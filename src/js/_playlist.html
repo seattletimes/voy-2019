@@ -1,0 +1,12 @@
+<ul class="playlist">
+<% data.forEach(function(item) { %>
+  <li class="playlist-item" data-id="<%= item.id %>">
+    <div class="image-frame">
+      <img src="<%= item.poster %>">
+    </div>
+    <span class="caption"><%= item.name %></span>
+    <% if (item.link) { %>
+    <a class="story-link" href="<%= item.link.url %>">Read more &raquo;</a>
+    <% } %>
+<% }); %>
+</ul>
