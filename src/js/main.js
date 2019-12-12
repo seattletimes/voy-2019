@@ -15,7 +15,8 @@ var playlistContainer = document.querySelector(".playlist-container");
 
 var log = console.log.bind(console);
 
-var playlistID = 5975312222001;
+var playlistID = '1651943876230718130';
+// console.log(playlistID);
 
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
 
@@ -23,6 +24,8 @@ var closest = function(element, className) {
   while (element && !element.classList.contains(className)) element = element.parentElement;
   return element;
 };
+
+
 
 ready(function(player) {
   window.player = player;
@@ -46,6 +49,7 @@ ready(function(player) {
       player.catalog.load(playlist);
     });
   };
+
 
   loadPlaylist(playlistID);
 
