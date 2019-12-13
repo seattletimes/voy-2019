@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <%= t.include("partials/_nav.html") %>
+
     <% if (json.project.production && !json.project.embedded) { %>
       <%= t.include("partials/_gtmNoScript.html") %>
     <% } %>
@@ -37,10 +39,7 @@
    </div>
     </responsive-child>
 
-    <script>
-    var playlistID = 1651943876230718130;
-    console.log(playlistID);
-    </script>
+    <%= t.include("partials/_navBottom.html") %>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
