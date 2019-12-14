@@ -6,17 +6,17 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2019/videos-of-the-year"
     }
   },
-  "title": "",
-  "description": "",
-  "author": "",
-  "url": "",
-  "post_id": 0,
+  "title": "Videos of the year 2019 | The Seattle Times",
+  "description": "Asylum seekers in Tijuana, the crisis of violence against Native women and the impact of noise on orcas: The best Seattle Times video stories of 2019.",
+  "author": "Lauren Frohne",
+  "url": "https://projects.seattletimes.com/2019/videos-of-the-year/",
+  "post_id": 12298354,
   "image": "assets/social.jpg",
   "sheets": [],
   "docs": [],
-  "embedded": true,
-  "production": false
+  "embedded": false,
+  "production": true
 }

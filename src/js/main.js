@@ -1,11 +1,7 @@
-// var paywall = require("./lib/paywall");
-// setTimeout(() => paywall(12345678), 5000);
+var paywall = require("./lib/paywall");
+setTimeout(() => paywall(12298354), 5000);
 
 require("component-responsive-frame/child");
-
-// require("./lib/social");
-// require("./lib/ads");
-// var track = require("./lib/tracking");
 
 var ready = require("./brightcove");
 var dot = require("./lib/dot");
