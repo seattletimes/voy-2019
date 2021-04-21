@@ -16,31 +16,45 @@
     <% } %>
     <responsive-child>
       <!-- content goes here -->
+      <h1>Videos of the year 2019</h1>
+      <p class="chatter">
+        Our favorite Seattle Times video stories and short documentaries of 2019
+      </p>
+      
       <div class="feature-player">
      <div class="video-container aspect-outer pending">
        <div class="aspect-inner">
-         <video
+         <!-- <video
            data-account="1509317113"
            data-player="Nk8AFQkhe"
            data-embed="default"
            id="player"
            class="video-js" controls>
-         </video>
+         </video> -->
+         <div id="firstVid"></div>
+         <div id="secondVid">
+           <script src="https://cdn.jwplayer.com/players/zr1FCApT-UXknQA8J.js"></script>
+         </div>
        </div>
      </div>
-     <hr>
-     <h1>Videos of the year 2019</h1>
-     <p class="chatter">
-       Our favorite Seattle Times video stories and short documentaries of 2019
-     </p>
+     <hr class="divider">
+     <div class="mainVidStats">
+       <div id="title-hed">Episode 1: We cannot be invisible any longer</div>
+       <div id="title">Native American women have been targeted with high rates of violence, murder, rape and disappearance for centuries. This series explores how the MMIW movement is raising awareness and working for change. (Lauren Frohne & Bettina Hansen)</div>
+       <div id="title-link"><a id="story-link" href="https://projects.seattletimes.com/2019/mmiw/" target="_blank" rel="nofollow noreferrer noopener">Read more &raquo;</a></div>
+     </div>
+
+
+
       <div class="playlist-controls">
-       <div class="playlist-container loading"></div>
+       <div class="playlist-container"></div>
       </div>
    </div>
     </responsive-child>
 
     <%= t.include("partials/_navBottom.html") %>
 
+    <script src="https://cdn.jwplayer.com/libraries/oNGue23q.js"></script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>

@@ -1,12 +1,18 @@
 <ul class="playlist">
-<% data.forEach(function(item) { %>
-  <li class="playlist-item" data-id="<%= item.id %>">
+<% data.forEach(function(item) {
+  var seconds = Math.round(item.duration);
+  var minutes = Math.floor(seconds/60);
+  var remainder = seconds % 60;
+
+  remainder = (remainder.toString().length === 1) ? "0" + remainder : remainder;
+%>
+  <li class="playlist-item" data-id="<%= item.mediaid %>">
     <div class="image-frame">
-      <img src="<%= item.poster %>">
+      <img src="<%= item.image %>">
     </div>
-    <span class="caption"><%= item.name %></span>
+    <div class="cardTitle"><%= item.title %> <span class="duration">(<%= minutes %>:<%= remainder %>)</span></div>
     <% if (item.link) { %>
-    <a class="story-link" href="<%= item.link.url %>">Read more &raquo;</a>
+    <!-- <a class="story-link" href="<%= item.link.url %>">Read more &raquo;</a> -->
     <% } %>
 <% }); %>
 </ul>
